@@ -9,6 +9,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'cancancan'
 gem 'activeadmin', github: 'activeadmin'
+gem 'omniauth-google-oauth2'
+gem 'paper_trail'
 
 group :development, :test do
   gem 'byebug'
