@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317003527) do
+ActiveRecord::Schema.define(version: 20150317010127) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -48,14 +48,17 @@ ActiveRecord::Schema.define(version: 20150317003527) do
 
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
-    t.text     "description"
-    t.string   "location"
-    t.string   "size"
-    t.date     "due_date"
-    t.time     "due_time"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "long_description"
+    t.string   "short_description"
+    t.date     "task_date"
+    t.time     "task_time"
+    t.integer  "user_id"
+    t.integer  "status"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
+
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
