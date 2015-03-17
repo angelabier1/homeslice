@@ -1,5 +1,8 @@
 class TasksController < InheritedResources::Base
 
+  def index
+    @tasks = Task.all
+  end
   private
 
     def task_params
