@@ -71,7 +71,7 @@ ActiveAdmin.setup do |config|
   # In case you prefer Pundit over other solutions you can here pass
   # the name of default policy class. This policy will be used in every
   # case when Pundit is unable to find suitable policy.
-  # config.pundit_default_policy = "MyDefaultPunditPolicy"
+   config.pundit_default_policy = "UserPolicy"
 
   # You can customize your CanCan Ability class name here.
   # config.cancan_ability_class = "Ability"
@@ -123,10 +123,10 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.comments = false
+  config.comments = false
   #
   # You can disable the menu item for the comments index page:
-  # config.show_comments_in_menu = false
+  #config.show_comments_in_menu = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
