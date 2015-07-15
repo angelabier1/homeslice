@@ -7,8 +7,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'cancancan'
+gem 'pundit'
 gem 'activeadmin', github: 'activeadmin'
+gem 'omniauth-google-oauth2'
+gem 'paper_trail'
 
 group :development, :test do
   gem 'byebug'
